@@ -24,4 +24,7 @@ main (void)
   head->next = second;
   head->next->next = t_create_node ("subnode2");
   printf ("%s\n", (char *)head->next->next->data);
+  free(head->next->next);
+  free(head->next);
+  free(head);
 }
